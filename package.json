@@ -52,8 +52,5 @@
     "event-cat",
     "chiui"
   ],
-  "peerDependencies": {},
-  "dependencies": {
-    "@chiui/event-cat": "^0.0.3"
-  }
+  "peerDependencies": {}
 }
