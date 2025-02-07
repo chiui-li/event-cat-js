@@ -1,0 +1,20 @@
+{
+  "name": "event-cat",
+  "module": "index.esm.js",
+  "main": "index.cjs.js",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.ts",
+    "build": "bun run build-iife && bun run build-esm && bun run build-cjs && bun run build-iife-dev",
+    "build-esm": "bun build index.ts --format=esm --outfile=index.esm.js",
+    "build-cjs": "bun build index.ts --format=cjs --outfile=index.cjs.js",
+    "build-iife": "bun build index.ts --format=iife --outfile=index.iife.js --minify",
+    "build-iife-dev": "bun build index.ts --format=iife --outfile=index.iife.js",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {}
+}
