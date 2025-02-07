@@ -1,20 +1,31 @@
 {
   "name": "event-cat",
-  "module": "index.esm.js",
-  "main": "index.cjs.js",
+  "module": "esm/index.js",
+  "main": "commonjs/index.js",
+  "types": "index.d.ts",
   "type": "module",
+  "version": "0.0.1",
+  "description": "😼 event-cat is a event emitter js library, small, lightweight, and easy to use, support commonjs, esm, umd",
+  "author": "chhiuli@gmail.com",
+  "license": "MIT",
   "scripts": {
-    "dev": "bun run index.ts",
-    "build": "bun run build-iife && bun run build-esm && bun run build-cjs && bun run build-iife-dev",
-    "build-esm": "bun build index.ts --format=esm --outfile=index.esm.js",
-    "build-cjs": "bun build index.ts --format=cjs --outfile=index.cjs.js",
-    "build-iife": "bun build index.ts --format=iife --outfile=index.iife.js --minify",
-    "build-iife-dev": "bun build index.ts --format=iife --outfile=index.iife.js",
+    "dev": "tsc index.ts",
+    "build": "npm run build-esm && npm run build-cjs && npm run build-umd",
+    "build-esm": "tsc --module es6 --outdir esm",
+    "build-cjs": "tsc  --module commonjs --outdir commonjs",
+    "build-umd": "tsc  --module umd --outdir umd",
     "test": "bun test"
   },
+  "files": [
+    "esm",
+    "commonjs",
+    "umd",
+    "index.d.ts",
+    "README.md"
+  ],
   "devDependencies": {
     "@types/bun": "latest",
-    "typescript": "^5.0.0"
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {}
 }

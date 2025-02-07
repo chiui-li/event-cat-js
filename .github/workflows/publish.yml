@@ -1,0 +1,44 @@
+name: Publish to npm
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: read  # 读取仓库内容
+  packages: write  # 允许写入 npm 包
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: install bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22  # 选择 Node.js 版本
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build  # 请确保你的 package.json 里有 "build" 脚本
+      - name: Bump version
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          npm version patch -m "chore: bump version to %s [skip ci]"
+          git push --follow-tags
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
