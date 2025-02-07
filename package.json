@@ -1,11 +1,11 @@
 {
-  "name": "event-cat",
+  "name": "@chiui/event-cat",
   "module": "esm/index.js",
   "main": "commonjs/index.js",
   "types": "index.d.ts",
   "type": "module",
-  "version": "0.0.1",
-  "description": "😼 event-cat is a event emitter js library, small, lightweight, and easy to use, support commonjs, esm, umd",
+  "version": "0.0.0",
+  "description": "😼 @chiui/event-cat is a event emitter js library, small, lightweight, and easy to use, support commonjs, esm, umd",
   "author": "chhiuli@gmail.com",
   "license": "MIT",
   "scripts": {

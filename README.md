@@ -1,19 +1,19 @@
-# event-cat-js
+# @chiui/event-cat
 
-😼 event-cat is an event emitter JavaScript library that is small, lightweight, and easy to use. It supports CommonJS, ESM, and UMD modules.
+😼 `@chiui/event-cat` is an event emitter JavaScript library that is small, lightweight, and easy to use. It supports CommonJS, ESM, and UMD modules.
 
 ## Installation
 
-You can install event-cat-js using npm:
+You can install `@chiui/event-cat` using npm:
 
 ```sh
-npm install event-cat-js
+npm install @chiui/event-cat
 ```
 
 ## Usage
 
 ```typescript
-import EventCat from 'event-cat-js';
+import EventCat from '@chiui/event-cat';
 ```
 
 ```typescript
