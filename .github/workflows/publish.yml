@@ -7,7 +7,7 @@ on:
       - master
 
 permissions:
-  contents: read  # 读取仓库内容
+  contents: write  # 读写仓库内容
   packages: write  # 允许写入 npm 包
 
 jobs:
