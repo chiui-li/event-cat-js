@@ -21,7 +21,9 @@
     "commonjs",
     "umd",
     "index.d.ts",
-    "README.md"
+    "README.md",
+    "package.json",
+    "LICENSE"
   ],
   "devDependencies": {
     "@types/bun": "latest",
