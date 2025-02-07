@@ -45,6 +45,7 @@ jobs:
       - name: Bump version
         run: |
           git clean -fd
+          git status
           npm version patch -m "chore: bump version to %s [skip ci]"
           git push --follow-tags
 
