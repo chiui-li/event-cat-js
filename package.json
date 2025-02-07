@@ -7,13 +7,13 @@
   "version": "0.0.2",
   "description": "😼 @chiui/event-cat is a event emitter js library, small, lightweight, and easy to use, support commonjs, esm, umd",
   "author": "chhiuli@gmail.com",
-  "homepage": "https://github.com/chiui/event-cat",
+  "homepage": "https://github.com/chiui-li/event-cat-js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chiui/event-cat.git"
+    "url": "git+https://github.com/chiui-li/event-cat-js.git"
   },
   "bugs": {
-    "url": "https://github.com/chiui/event-cat/issues"
+    "url": "https://github.com/chiui-li/event-cat-js/issues"
   },
   "license": "MIT",
   "scripts": {
