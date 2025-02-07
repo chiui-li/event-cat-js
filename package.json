@@ -1,9 +1,16 @@
 {
   "name": "@chiui/event-cat",
-  "module": "esm/index.js",
-  "main": "commonjs/index.js",
-  "types": "index.d.ts",
   "type": "module",
+  "exports": {
+    "import": {
+      "types": "./index.d.ts",
+      "default": "./esm/index.js"
+    },
+    "require": {
+      "types": "./index.d.ts",
+      "default": "./commonjs/index.js"
+    }
+  },
   "version": "0.0.3",
   "description": "😼 @chiui/event-cat is a event emitter js library, small, lightweight, and easy to use, support commonjs, esm, umd",
   "author": "chhiuli@gmail.com",
@@ -17,7 +24,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "tsc index.ts",
+    "dev": "bun run index.ts",
     "build": "npm run build-esm && npm run build-cjs && npm run build-umd",
     "build-esm": "tsc --module es6 --outdir esm",
     "build-cjs": "tsc  --module commonjs --outdir commonjs",
@@ -45,5 +52,8 @@
     "event-cat",
     "chiui"
   ],
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "dependencies": {
+    "@chiui/event-cat": "^0.0.3"
+  }
 }
