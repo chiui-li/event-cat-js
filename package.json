@@ -11,7 +11,7 @@
       "default": "./commonjs/index.js"
     }
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "😼 @chiui/event-cat is a event emitter js library, small, lightweight, and easy to use, support commonjs, esm, umd",
   "author": "chhiuli@gmail.com",
   "homepage": "https://github.com/chiui-li/event-cat-js",
