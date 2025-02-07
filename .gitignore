@@ -134,3 +134,5 @@ index.d.ts
 esm
 umd
 commonjs
+package-lock.json
+bun.lock
