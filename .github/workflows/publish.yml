@@ -35,6 +35,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+      
       - name: Test project
         run: bun test  # 请确保你的 package.json 里有 "test" 脚本
       
@@ -43,6 +44,7 @@ jobs:
       
       - name: Bump version
         run: |
+          git clean -fd
           npm version patch -m "chore: bump version to %s [skip ci]"
           git push --follow-tags
 
